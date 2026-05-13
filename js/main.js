@@ -6,9 +6,55 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileNav();
   initScrollButtons();
   initAllCarousels();
+  initContentVideos();
   initHistoryToggles();
   initStoreCarousels();
 });
+
+/* ---------- Content Videos ---------- */
+function initContentVideos() {
+  document.querySelectorAll('.event-player').forEach(video => {
+    video.controls = true;
+    video.muted = false;
+    video.defaultMuted = false;
+    video.preload = 'metadata';
+
+    function enableVideoAudio() {
+      video.muted = false;
+      video.defaultMuted = false;
+      if (video.volume === 0) {
+        video.volume = 1;
+      }
+    }
+
+    if (window.Plyr) {
+      const player = new Plyr(video, {
+        controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'fullscreen'],
+        volume: 1,
+        muted: false,
+        resetOnEnd: false
+      });
+
+      player.on('ready', () => {
+        player.muted = false;
+        player.volume = 1;
+        enableVideoAudio();
+      });
+
+      player.on('play', () => {
+        player.muted = false;
+        if (player.volume === 0) {
+          player.volume = 1;
+        }
+        enableVideoAudio();
+      });
+
+      return;
+    }
+
+    video.addEventListener('play', enableVideoAudio);
+  });
+}
 
 /* ---------- Mobile Navigation ---------- */
 function initMobileNav() {

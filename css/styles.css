@@ -377,6 +377,17 @@ ul {
   aspect-ratio: 16 / 9;
 }
 
+.event-player {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+}
+
+.event-video .plyr {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
 /* ---------- Event Description ---------- */
 .event-description {
   max-width: 800px;

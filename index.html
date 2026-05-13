@@ -6,6 +6,7 @@
   <title>Home — Karate Dojo</title>
   <!-- EDITOR: Change the <title> and site-name below to your dojo name -->
   <link rel="stylesheet" href="css/styles.css?v=3">
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
 </head>
 <body>
 
@@ -85,8 +86,8 @@
 
         <!-- --- Video (optional) --- -->
         <div class="event-video">
-          <video controls>
-            <source src="images/events/11-05-2026/WhatsApp%20Video%202026-05-13%20at%202.29.55%20PM.mp4" type="video/mp4">
+          <video class="event-player" preload="metadata" controls>
+            <source src="images/events/11-05-2026/event-video-web.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
         </div>
@@ -190,6 +191,7 @@
     <button id="scrollToBottom" class="scroll-btn" aria-label="Scroll to bottom">&#9660;</button>
   </div>
 
+  <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
   <script src="js/main.js?v=3"></script>
 </body>
 </html>
