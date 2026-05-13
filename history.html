@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>History — Karate Dojo</title>
+  <link rel="stylesheet" href="css/styles.css?v=3">
+</head>
+<body>
+
+  <!-- ========== HEADER / NAV ========== -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="logo-area">
+        <img src="Karate%20Assets/Logo.jpeg" alt="Dojo Logo" onerror="this.style.display='none'">
+        <span class="site-name">Karate Dojo</span>
+      </a>
+
+      <button class="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="history.html" class="active">History</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="store.html">Store</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero">
+    <h1>Event History</h1>
+    <p>A look back at our past events and accomplishments</p>
+  </section>
+
+  <!-- ========== HISTORY EVENTS ========== -->
+  <main class="section">
+    <h2 class="section-title">Past Events</h2>
+
+    <!--
+      EDITOR INSTRUCTIONS — HOW TO MOVE AN EVENT FROM HOME TO HISTORY:
+      ================================================================
+      1. Copy the entire <div class="current-event" ...> ... </div> block from index.html.
+      2. Paste it below as the FIRST entry in this section (right after this comment).
+      3. Change "current-event" to "history-event" in the class.
+      4. Add a toggle-icon span inside the event-header:
+           <span class="toggle-icon">&#9660;</span>
+      5. Remove the event from index.html.
+      6. The event will appear collapsed by default; visitors click the header to expand.
+
+      TEMPLATE (copy and fill in):
+      ─────────────────────────────
+    -->
+
+    <!-- === PASTE NEW HISTORY EVENTS HERE (most recent at top) === -->
+
+    <div class="history-event">
+      <div class="event-header">
+        <div>
+          <h2>Event Title — Update This</h2>
+          <p class="event-date">Date: TBD</p>
+        </div>
+        <span class="toggle-icon">&#9660;</span>
+      </div>
+
+      <div class="event-body">
+        <div class="carousel">
+          <div class="carousel-track">
+            <div class="carousel-slide active">
+              <img src="Karate%20Assets/Suite%20images/Current%20event/WhatsApp%20Image%202026-04-01%20at%2012.18.17%20AM.jpeg" alt="Event photo 1">
+            </div>
+            <div class="carousel-slide">
+              <img src="Karate%20Assets/Suite%20images/Current%20event/WhatsApp%20Image%202026-04-01%20at%2012.18.18%20AM.jpeg" alt="Event photo 2">
+            </div>
+            <div class="carousel-slide">
+              <img src="Karate%20Assets/Suite%20images/Current%20event/WhatsApp%20Image%202026-04-01%20at%2012.18.18%20AM%20(1).jpeg" alt="Event photo 3">
+            </div>
+          </div>
+          <button class="carousel-arrow prev" aria-label="Previous">&#10094;</button>
+          <button class="carousel-arrow next" aria-label="Next">&#10095;</button>
+          <div class="carousel-indicators"></div>
+          <div class="carousel-pause-badge">⏸ Paused</div>
+        </div>
+
+        <div class="event-description">
+          <p>Event description will be added here. Update this paragraph with details about the event, participants, results, and any other relevant information.</p>
+        </div>
+
+        <div class="event-map">
+          <h3>📍 Event Location</h3>
+          <div class="map-container">
+            <div class="map-placeholder">
+              Add the Google Maps embed URL here when the event location is ready.
+            </div>
+          </div>
+          <p class="map-link map-link-placeholder">Google Maps link coming soon.</p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Karate Dojo</h3>
+        <p>Building character through martial arts. Discipline, respect, and excellence in every class.</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <p><a href="index.html">Home</a></p>
+        <p><a href="history.html">History</a></p>
+        <p><a href="about.html">About Us</a></p>
+        <p><a href="store.html">Store</a></p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <a href="https://wa.me/27799201582?text=Hi%20Ayaan%2C%20I%20found%20your%20website%20and%20would%20like%20to%20get%20in%20touch." class="contact-link" target="_blank" rel="noopener noreferrer">
+          <span class="contact-icon">💬</span>
+          <span>WhatsApp: Ayaan Solomons — 079 920 1582</span>
+        </a>
+        <a href="mailto:update-email@example.com?subject=Website%20Enquiry" class="contact-link">
+          <span class="contact-icon">✉️</span>
+          <span>Email: update-email@example.com</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <script>document.write(new Date().getFullYear())</script> Karate Dojo. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ========== SCROLL BUTTONS ========== -->
+  <div class="floating-controls">
+    <button id="themeToggle" class="theme-toggle-btn" aria-label="Switch to dark mode" title="Switch to dark mode">&#9790;</button>
+    <button id="scrollToTop" class="scroll-btn" aria-label="Scroll to top">&#9650;</button>
+    <button id="scrollToBottom" class="scroll-btn" aria-label="Scroll to bottom">&#9660;</button>
+  </div>
+
+  <script src="js/main.js?v=3"></script>
+</body>
+</html>
