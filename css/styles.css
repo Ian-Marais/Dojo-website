@@ -56,6 +56,18 @@ body.dark-mode .about-content .about-placeholder {
   color: rgba(226, 232, 240, 0.82);
 }
 
+body.dark-mode .section-title,
+body.dark-mode .store-item-info h3,
+body.dark-mode .store-contact h3 {
+  color: rgba(248, 250, 252, 0.94);
+}
+
+body.dark-mode .store-item-info .item-description,
+body.dark-mode .store-item-info .stock,
+body.dark-mode .store-contact p {
+  color: rgba(226, 232, 240, 0.82);
+}
+
 body.dark-mode .partner-placeholder {
   border-color: rgba(248, 250, 252, 0.22);
   background: rgba(148, 163, 184, 0.08);

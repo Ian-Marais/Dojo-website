@@ -86,6 +86,11 @@ function initScrollButtons() {
 
   const body = document.body;
   const storedTheme = window.localStorage.getItem('theme-preference');
+  const systemThemeQuery = window.matchMedia('(prefers-color-scheme: dark)');
+
+  function applyThemePreference(theme) {
+    body.classList.toggle('dark-mode', theme === 'dark');
+  }
 
   function syncThemeToggle() {
     if (!themeToggle) return;
@@ -95,11 +100,19 @@ function initScrollButtons() {
     themeToggle.setAttribute('title', isDarkMode ? 'Switch to light mode' : 'Switch to dark mode');
   }
 
-  if (storedTheme === 'dark') {
-    body.classList.add('dark-mode');
+  if (storedTheme === 'dark' || storedTheme === 'light') {
+    applyThemePreference(storedTheme);
+  } else {
+    applyThemePreference(systemThemeQuery.matches ? 'dark' : 'light');
   }
 
   syncThemeToggle();
+
+  systemThemeQuery.addEventListener('change', event => {
+    if (window.localStorage.getItem('theme-preference')) return;
+    applyThemePreference(event.matches ? 'dark' : 'light');
+    syncThemeToggle();
+  });
 
   function updateScrollButtons() {
     const scrollY = window.scrollY;
@@ -137,8 +150,9 @@ function initScrollButtons() {
 
   if (themeToggle) {
     themeToggle.addEventListener('click', () => {
-      body.classList.toggle('dark-mode');
-      window.localStorage.setItem('theme-preference', body.classList.contains('dark-mode') ? 'dark' : 'light');
+      const nextTheme = body.classList.contains('dark-mode') ? 'light' : 'dark';
+      applyThemePreference(nextTheme);
+      window.localStorage.setItem('theme-preference', nextTheme);
       syncThemeToggle();
     });
   }
