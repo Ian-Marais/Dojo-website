@@ -163,6 +163,7 @@ ul {
   letter-spacing: 0.04em;
   text-transform: none;
   line-height: 1.2;
+  white-space: nowrap;
 }
 
 /* Navigation */
@@ -1143,7 +1144,8 @@ body.dark-mode .theme-toggle-btn:hover {
   }
 
   .site-subname {
-    font-size: 0.65rem;
+    font-size: clamp(0.48rem, 1.7vw, 0.65rem);
+    letter-spacing: 0.02em;
   }
 }
 
