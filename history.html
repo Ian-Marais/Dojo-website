@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>History — Karate Kai International</title>
-  <link rel="icon" type="image/png" href="Karate%20Assets/Light%20mode%20browser%20tab%20logo.png" media="(prefers-color-scheme: light)">
-  <link rel="icon" type="image/png" href="Karate%20Assets/Dark%20mode%20browser%20tab%20logo.png" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" href="Assets/logos/Light%20mode%20browser%20tab%20logo.png" media="(prefers-color-scheme: light)">
+  <link rel="icon" type="image/png" href="Assets/logos/Dark%20mode%20browser%20tab%20logo.png" media="(prefers-color-scheme: dark)">
   <link rel="stylesheet" href="css/styles.css?v=7">
 </head>
 <body>
@@ -15,7 +15,7 @@
     <div class="header-container">
       <div class="site-identity">
         <a href="index.html" class="logo-area">
-          <img src="Karate%20Assets/Logo.jpeg" alt="Dojo Logo" onerror="this.style.display='none'">
+          <img src="Assets/logos/Dark%20mode%20browser%20tab%20logo.png" alt="Dojo Logo" onerror="this.style.display='none'">
           <span class="site-branding">
             <span class="site-name">Karate Kai<br>International</span>
           </span>
@@ -51,12 +51,13 @@
       EDITOR INSTRUCTIONS — HOW TO MOVE AN EVENT FROM HOME TO HISTORY:
       ================================================================
       1. Copy the entire <div class="current-event" ...> ... </div> block from index.html.
-      2. Paste it below as the FIRST entry in this section (right after this comment).
-      3. Change "current-event" to "history-event" in the class.
-      4. Add a toggle-icon span inside the event-header:
+      2. Move that event's media from the current-event area into Assets/events/History/Initial event images/ (or a dated folder under Assets/events/ if you prefer).
+      3. Paste it below as the FIRST entry in this section (right after this comment).
+      4. Change "current-event" to "history-event" in the class.
+      5. Add a toggle-icon span inside the event-header:
            <span class="toggle-icon">&#9660;</span>
-      5. Remove the event from index.html.
-      6. The event will appear collapsed by default; visitors click the header to expand.
+      6. Remove the event from index.html.
+      7. The event will appear collapsed by default; visitors click the header to expand.
 
       TEMPLATE (copy and fill in):
       ─────────────────────────────
@@ -77,13 +78,13 @@
         <div class="carousel">
           <div class="carousel-track">
             <div class="carousel-slide active">
-              <img src="Karate%20Assets/Suite%20images/Current%20event/WhatsApp%20Image%202026-04-01%20at%2012.18.17%20AM.jpeg" alt="Event photo 1">
+              <img src="Assets/events/History/Initial%20event%20images/WhatsApp%20Image%202026-04-01%20at%2012.18.17%20AM.jpeg" alt="Event photo 1">
             </div>
             <div class="carousel-slide">
-              <img src="Karate%20Assets/Suite%20images/Current%20event/WhatsApp%20Image%202026-04-01%20at%2012.18.18%20AM.jpeg" alt="Event photo 2">
+              <img src="Assets/events/History/Initial%20event%20images/WhatsApp%20Image%202026-04-01%20at%2012.18.18%20AM.jpeg" alt="Event photo 2">
             </div>
             <div class="carousel-slide">
-              <img src="Karate%20Assets/Suite%20images/Current%20event/WhatsApp%20Image%202026-04-01%20at%2012.18.18%20AM%20(1).jpeg" alt="Event photo 3">
+              <img src="Assets/events/History/Initial%20event%20images/WhatsApp%20Image%202026-04-01%20at%2012.18.18%20AM%20(1).jpeg" alt="Event photo 3">
             </div>
           </div>
           <button class="carousel-arrow prev" aria-label="Previous">&#10094;</button>
