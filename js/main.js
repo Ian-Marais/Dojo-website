@@ -77,6 +77,22 @@ function initMobileNav() {
 }
 
 /* ---------- Scroll To Top / Bottom Buttons ---------- */
+function getControlIconSvg(iconName) {
+  if (iconName === 'sun') {
+    return '<svg class="control-icon-svg theme-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.25" fill="currentColor"></circle><path d="M12 2.75V5.25M12 18.75V21.25M21.25 12H18.75M5.25 12H2.75M18.54 5.46L16.77 7.23M7.23 16.77L5.46 18.54M18.54 18.54L16.77 16.77M7.23 7.23L5.46 5.46" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path></svg>';
+  }
+
+  if (iconName === 'up') {
+    return '<svg class="control-icon-svg arrow-icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 4.25L12.75 11.75H3.25L8 4.25Z" fill="currentColor"></path></svg>';
+  }
+
+  if (iconName === 'down') {
+    return '<svg class="control-icon-svg arrow-icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 11.75L3.25 4.25H12.75L8 11.75Z" fill="currentColor"></path></svg>';
+  }
+
+  return '<span class="control-icon-glyph moon-icon" aria-hidden="true">&#9790;</span>';
+}
+
 function initScrollButtons() {
   const btnTop = document.getElementById('scrollToTop');
   const btnBottom = document.getElementById('scrollToBottom');
@@ -95,10 +111,13 @@ function initScrollButtons() {
   function syncThemeToggle() {
     if (!themeToggle) return;
     const isDarkMode = body.classList.contains('dark-mode');
-    themeToggle.innerHTML = isDarkMode ? '&#9728;' : '&#9790;';
+    themeToggle.innerHTML = getControlIconSvg(isDarkMode ? 'sun' : 'moon');
     themeToggle.setAttribute('aria-label', isDarkMode ? 'Switch to light mode' : 'Switch to dark mode');
     themeToggle.setAttribute('title', isDarkMode ? 'Switch to light mode' : 'Switch to dark mode');
   }
+
+  btnTop.innerHTML = getControlIconSvg('up');
+  btnBottom.innerHTML = getControlIconSvg('down');
 
   if (storedTheme === 'dark' || storedTheme === 'light') {
     applyThemePreference(storedTheme);

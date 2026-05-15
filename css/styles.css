@@ -661,9 +661,10 @@ ul {
   box-shadow: none !important;
   filter: none;
   transition: var(--transition);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  line-height: 0;
   opacity: 0;
   pointer-events: none;
 }
@@ -697,10 +698,39 @@ ul {
   box-shadow: none !important;
   filter: none;
   transition: var(--transition);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  line-height: 0;
   pointer-events: auto;
+}
+
+.control-icon-svg {
+  display: block;
+  width: 16px;
+  height: 16px;
+  flex: none;
+  pointer-events: none;
+}
+
+.control-icon-glyph {
+  display: block;
+  line-height: 1;
+  flex: none;
+  pointer-events: none;
+}
+
+.moon-icon {
+  font-size: 1.1rem;
+}
+
+.theme-toggle-btn .control-icon-svg {
+  width: 18px;
+  height: 18px;
+}
+
+#scrollToBottom .control-icon-svg {
+  transform: translateY(1px);
 }
 
 .theme-toggle-btn:hover {
