@@ -6,7 +6,7 @@
   <title>History — Karate Kai International</title>
   <link rel="icon" type="image/png" href="Assets/logos/Light%20mode%20browser%20tab%20logo.png" media="(prefers-color-scheme: light)">
   <link rel="icon" type="image/png" href="Assets/logos/Dark%20mode%20browser%20tab%20logo.png" media="(prefers-color-scheme: dark)">
-  <link rel="stylesheet" href="css/styles.css?v=7">
+  <link rel="stylesheet" href="css/styles.css?v=10">
 </head>
 <body>
 
@@ -16,9 +16,6 @@
       <div class="site-identity">
         <a href="index.html" class="logo-area">
           <img src="Assets/logos/Dark%20mode%20browser%20tab%20logo.png" alt="Dojo Logo" onerror="this.style.display='none'">
-          <span class="site-branding">
-            <span class="site-name">Karate Kai<br>International</span>
-          </span>
         </a>
         <span class="site-subname">Sensei Naazera Primrose Dojo</span>
       </div>
@@ -30,34 +27,32 @@
       <nav class="main-nav">
         <ul>
           <li><a href="history.html" class="active">History</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
           <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
           <li><a href="store.html">Store</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- ========== HERO ========== -->
-  <section class="hero">
-    <h1>Event History</h1>
-    <p>A look back at our past events and accomplishments</p>
-  </section>
-
   <!-- ========== HISTORY EVENTS ========== -->
   <main class="section">
-    <h2 class="section-title">Past Events</h2>
+    <h2 class="section-title history-section-title">Past Events</h2>
 
     <!--
       EDITOR INSTRUCTIONS — HOW TO MOVE AN EVENT FROM HOME TO HISTORY:
       ================================================================
       1. Copy the entire <div class="current-event" ...> ... </div> block from index.html.
-      2. Move that event's media from the current-event area into Assets/events/History/Initial event images/ (or a dated folder under Assets/events/ if you prefer).
+       2. Move that event's media from the current-event area into Assets/events/History/Initial event images/ (or a dated folder under Assets/events/ if you prefer).
       3. Paste it below as the FIRST entry in this section (right after this comment).
       4. Change "current-event" to "history-event" in the class.
       5. Add a toggle-icon span inside the event-header:
            <span class="toggle-icon">&#9660;</span>
-      6. Remove the event from index.html.
-      7. The event will appear collapsed by default; visitors click the header to expand.
+       6. Keep the event testimonials block and the event location block when archiving the event here.
+       7. Copy the same testimonials into testimonials.html under the matching event date.
+       8. Remove the event from index.html.
+       9. The event will appear collapsed by default; visitors click the header to expand.
 
       TEMPLATE (copy and fill in):
       ─────────────────────────────
@@ -97,6 +92,21 @@
           <p>Event description will be added here. Update this paragraph with details about the event, participants, results, and any other relevant information.</p>
         </div>
 
+        <div class="event-testimonials">
+          <h3>Testimonials</h3>
+          <p class="section-note">Keep this testimonials section when moving events from Home to History, and copy the same dated entries to testimonials.html.</p>
+          <div class="testimonials-list">
+            <article class="testimonial-card">
+              <p class="testimonial-quote">&ldquo;Add the first testimonial for this event here. Include the final approved quote before archiving the event.&rdquo;</p>
+              <p class="testimonial-meta">Name or role</p>
+            </article>
+            <article class="testimonial-card">
+              <p class="testimonial-quote">&ldquo;Add another testimonial here so visitors can read feedback from students, parents, guests, or instructors.&rdquo;</p>
+              <p class="testimonial-meta">Name or role</p>
+            </article>
+          </div>
+        </div>
+
         <div class="event-map">
           <h3>📍 Event Location</h3>
           <div class="map-container">
@@ -123,8 +133,10 @@
         <h3>Quick Links</h3>
         <p><a href="index.html">Home</a></p>
         <p><a href="history.html">History</a></p>
+        <p><a href="testimonials.html">Testimonials</a></p>
         <p><a href="about.html">About Us</a></p>
         <p><a href="store.html">Store</a></p>
+        <p><a href="contact.html">Contact</a></p>
       </div>
 
       <div class="footer-section">
