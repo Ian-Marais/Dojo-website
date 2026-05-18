@@ -32,6 +32,10 @@ html {
 }
 
 body {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
   font-family: var(--font-main);
   color: var(--text-dark);
   background-color: var(--bg-light);
@@ -757,6 +761,7 @@ ul {
   background: var(--primary-color);
   color: var(--text-color);
   padding: 14px 20px 10px;
+  margin-top: auto;
 }
 
 .footer-container {
