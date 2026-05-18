@@ -132,6 +132,24 @@ body.dark-mode .about-section .section-title {
   color: #f8fafc;
 }
 
+body.dark-mode .map-link,
+body.dark-mode .reviews-map-icon {
+  color: #f8fafc;
+}
+
+body.dark-mode .reviews-cta {
+  background: #111c2f;
+  border: 1px solid rgba(148, 163, 184, 0.16);
+}
+
+body.dark-mode .reviews-map-icon {
+  background: rgba(59, 130, 246, 0.16);
+}
+
+body.dark-mode .reviews-map-icon:hover {
+  background: rgba(239, 68, 68, 0.2);
+}
+
 body.dark-mode .review-text,
 body.dark-mode .testimonial-quote {
   color: rgba(241, 245, 249, 0.96);
