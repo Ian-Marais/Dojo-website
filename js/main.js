@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 /* ---------- Content Videos ---------- */
 function initContentVideos() {
   document.querySelectorAll('.event-player').forEach(video => {
+  const footer = document.querySelector('.site-footer');
     video.controls = true;
     video.muted = false;
     video.defaultMuted = false;
@@ -94,10 +95,12 @@ function getControlIconSvg(iconName) {
 }
 
 function initScrollButtons() {
+  window.addEventListener('resize', updateScrollButtons);
   const btnTop = document.getElementById('scrollToTop');
   const btnBottom = document.getElementById('scrollToBottom');
   const themeToggle = document.getElementById('themeToggle');
   const controls = btnBottom ? btnBottom.closest('.floating-controls') : null;
+  const footer = document.querySelector('.site-footer');
   if (!btnTop || !btnBottom) return;
 
   const body = document.body;
@@ -151,6 +154,14 @@ function initScrollButtons() {
       btnBottom.classList.add('visible');
     } else {
       btnBottom.classList.remove('visible');
+    }
+
+    if (controls && footer) {
+      const footerRect = footer.getBoundingClientRect();
+      const footerOverlap = Math.max(0, windowHeight - footerRect.top);
+      controls.style.transform = footerOverlap > 0
+        ? `translateY(-${footerOverlap + 16}px)`
+        : 'translateY(0)';
     }
 
     if (controls) {
