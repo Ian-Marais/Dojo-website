@@ -356,6 +356,7 @@ ul {
 .section-title {
   text-align: center;
   font-size: 2rem;
+  margin-top: 0;
   margin-bottom: 10px;
   color: var(--primary-color);
   position: relative;
@@ -384,6 +385,7 @@ ul {
 }
 
 .history-main .history-section-title {
+  margin-top: 0;
   margin-bottom: 4px;
 }
 
@@ -1673,6 +1675,11 @@ body.dark-mode .theme-toggle-btn:hover {
 
   .section {
     padding: 25px 15px;
+  }
+
+  .history-main,
+  .testimonials-main {
+    padding-top: 0;
   }
 
   .store-grid {
