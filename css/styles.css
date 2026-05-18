@@ -1296,7 +1296,7 @@ body.dark-mode .theme-toggle-btn:hover {
 /* ---------- Store Page ---------- */
 .store-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   gap: 14px;
 }
 
@@ -1305,6 +1305,7 @@ body.dark-mode .theme-toggle-btn:hover {
 }
 
 .store-page .section {
+  max-width: none;
   padding: 6px 20px 12px;
 }
 
@@ -1318,8 +1319,8 @@ body.dark-mode .theme-toggle-btn:hover {
 
 .store-item {
   width: 100%;
-  max-width: 150px;
-  justify-self: center;
+  max-width: none;
+  justify-self: stretch;
   background: var(--card-bg);
   border-radius: 12px;
   box-shadow: var(--shadow);
