@@ -181,6 +181,8 @@ ul {
   flex-direction: column;
   align-items: flex-start;
   gap: 2px;
+    min-width: 0;
+    flex: 0 1 220px;
 }
 
 .logo-area {
@@ -188,16 +190,18 @@ ul {
   align-items: center;
   gap: 12px;
   padding: 10px 0 0;
+    max-width: 100%;
 }
 
 .site-branding {
   display: flex;
   flex-direction: column;
   gap: 0;
+    min-width: 0;
 }
 
 .logo-area img {
-  height: 50px;
+    height: clamp(40px, 5vw, 50px);
   width: auto;
 }
 
@@ -219,7 +223,9 @@ ul {
   letter-spacing: 0.04em;
   text-transform: none;
   line-height: 1.2;
-  white-space: nowrap;
+  white-space: normal;
+  max-width: 100%;
+  overflow-wrap: anywhere;
 }
 
 /* Navigation */
@@ -1454,6 +1460,19 @@ body.dark-mode .theme-toggle-btn:hover {
 
 /* ---------- Responsive ---------- */
 @media (max-width: 768px) {
+  .header-container {
+    gap: 10px;
+    padding: 0 14px;
+  }
+
+  .site-identity {
+    flex-basis: 170px;
+  }
+
+  .logo-area {
+    padding-top: 8px;
+  }
+
   .hamburger {
     display: none;
   }
@@ -1475,6 +1494,12 @@ body.dark-mode .theme-toggle-btn:hover {
     padding: 0 6px;
     font-size: 0.68rem;
     border-bottom: 3px solid transparent;
+  }
+
+  .site-subname {
+    font-size: clamp(0.55rem, 1.55vw, 0.68rem);
+    letter-spacing: 0.015em;
+    line-height: 1.15;
   }
 
   .hero h1 {
@@ -1534,13 +1559,53 @@ body.dark-mode .theme-toggle-btn:hover {
     align-items: flex-start;
   }
 
+  .site-identity {
+    flex-basis: 150px;
+  }
+
   .site-name {
     font-size: 0.98rem;
   }
 
   .site-subname {
-    font-size: clamp(0.48rem, 1.7vw, 0.65rem);
-    letter-spacing: 0.02em;
+    font-size: clamp(0.46rem, 1.65vw, 0.6rem);
+    letter-spacing: 0.01em;
+  }
+}
+
+@media (max-width: 640px) {
+  .header-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: start;
+    gap: 4px 10px;
+  }
+
+  .site-identity {
+    display: contents;
+  }
+
+  .logo-area {
+    grid-column: 1;
+    grid-row: 1;
+    padding-top: 8px;
+  }
+
+  .main-nav {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+  }
+
+  .site-subname {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    padding: 0 0 6px;
+    white-space: nowrap;
+    overflow-wrap: normal;
+    font-size: clamp(0.45rem, 1.95vw, 0.56rem);
+    letter-spacing: 0.01em;
+    line-height: 1.1;
   }
 }
 
