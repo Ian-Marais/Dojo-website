@@ -157,7 +157,7 @@ ul {
 
 /* ---------- Header / Navigation ---------- */
 .site-header {
-  background: var(--primary-color);
+  background: #b91c1c;
   padding: 0;
   position: sticky;
   top: 0;
