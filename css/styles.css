@@ -201,8 +201,11 @@ ul {
 }
 
 .logo-area img {
-    height: clamp(40px, 5vw, 50px);
-  width: auto;
+  width: clamp(40px, 5vw, 50px);
+  height: clamp(40px, 5vw, 50px);
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  flex: 0 0 auto;
 }
 
 .site-name {
@@ -1589,6 +1592,11 @@ body.dark-mode .theme-toggle-btn:hover {
     grid-column: 1;
     grid-row: 1;
     padding-top: 8px;
+  }
+
+  .logo-area img {
+    width: clamp(32px, 9vw, 42px);
+    height: clamp(32px, 9vw, 42px);
   }
 
   .main-nav {
