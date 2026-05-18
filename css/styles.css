@@ -1013,6 +1013,65 @@ body.dark-mode .theme-toggle-btn:hover {
   gap: 24px;
 }
 
+.reviews-cta {
+  max-width: 800px;
+  margin: 0 auto 18px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.reviews-cta p {
+  margin: 0;
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+.reviews-map-icon {
+  min-width: 44px;
+  min-height: 44px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: rgba(15, 52, 96, 0.08);
+  flex: 0 0 auto;
+  transition: var(--transition);
+  color: var(--primary-color);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.reviews-map-icon svg {
+  width: 28px;
+  height: 28px;
+  display: block;
+}
+
+.reviews-map-icon img {
+  width: 28px;
+  height: 28px;
+  display: block;
+  object-fit: contain;
+}
+
+.reviews-map-icon span {
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.reviews-map-icon:hover {
+  transform: translateY(-1px) scale(1.04);
+  background: rgba(220, 38, 38, 0.1);
+}
+
 .review-card {
   background: var(--card-bg);
   border-radius: 12px;
@@ -1638,6 +1697,16 @@ body.dark-mode .theme-toggle-btn:hover {
   .review-card,
   .review-placeholder {
     padding: 16px;
+  }
+
+  .reviews-cta {
+    padding: 12px 14px;
+    gap: 10px;
+  }
+
+  .reviews-cta p {
+    font-size: 0.9rem;
+    line-height: 1.35;
   }
 
   .review-card {
