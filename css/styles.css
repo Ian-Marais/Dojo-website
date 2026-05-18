@@ -1016,7 +1016,11 @@ body.dark-mode .theme-toggle-btn:hover {
 .review-avatar {
   width: 42px;
   height: 42px;
-  border-radius: 50%;
+  inline-size: 42px;
+  block-size: 42px;
+  aspect-ratio: 1 / 1;
+  border-radius: 999px;
+  clip-path: circle(50% at 50% 50%);
   background: linear-gradient(180deg, #d9c2aa, #8b5e3c);
   color: #fff;
   display: flex;
@@ -1025,6 +1029,8 @@ body.dark-mode .theme-toggle-btn:hover {
   font-weight: 700;
   font-size: 1rem;
   overflow: hidden;
+  flex: 0 0 auto;
+  justify-self: start;
 }
 
 .review-avatar img {
@@ -1032,6 +1038,7 @@ body.dark-mode .theme-toggle-btn:hover {
   height: 100%;
   object-fit: cover;
   display: block;
+  border-radius: inherit;
 }
 
 .review-avatar span {
@@ -1566,7 +1573,6 @@ body.dark-mode .theme-toggle-btn:hover {
     grid-template-columns: 1fr;
   }
 
-  .review-avatar,
   .review-placeholder-media {
     min-height: 88px;
     max-width: 88px;
@@ -1575,6 +1581,12 @@ body.dark-mode .theme-toggle-btn:hover {
   .review-avatar {
     width: 42px;
     height: 42px;
+    inline-size: 42px;
+    block-size: 42px;
+    min-height: 42px;
+    min-width: 42px;
+    max-width: 42px;
+    max-height: 42px;
   }
 
   .contact-card,
