@@ -122,16 +122,20 @@ ul {
 
 .site-identity {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 2px;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  flex: 1 1 0;
+  min-width: 0;
 }
 
 .logo-area {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 10px 0 0;
+  padding: 0;
+  flex: 1 1 0;
+  min-width: 0;
 }
 
 .site-branding {
@@ -164,6 +168,9 @@ ul {
   text-transform: none;
   line-height: 1.2;
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
 }
 
 /* Navigation */
