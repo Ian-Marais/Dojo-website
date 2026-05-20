@@ -114,10 +114,11 @@ ul {
   max-width: var(--max-width);
   margin: 0 auto;
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: space-between;
   gap: 16px;
   padding: 0 20px;
+  min-height: 70px;
 }
 
 .site-identity {
@@ -174,19 +175,27 @@ ul {
 }
 
 /* Navigation */
+.main-nav {
+  height: 100%;
+}
+
 .main-nav ul {
   display: flex;
   gap: 5px;
+  height: 100%;
+  align-items: stretch;
 }
 
 .main-nav a {
-  display: block;
-  padding: 18px 20px;
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 20px;
   color: var(--text-color);
   font-weight: 600;
   text-transform: uppercase;
   font-size: 0.9rem;
-   letter-spacing: 0.02em;
+  letter-spacing: 0.02em;
   transition: var(--transition);
   border-bottom: 3px solid transparent;
 }
