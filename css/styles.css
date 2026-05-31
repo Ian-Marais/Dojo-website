@@ -926,12 +926,123 @@ ul {
 }
 
 .footer-bottom {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 12px;
   text-align: center;
   padding-top: 10px;
   margin-top: 10px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  font-size: 0.85rem;
+  font-size: clamp(0.65rem, 1.2vw, 0.85rem);
   opacity: 0.7;
+  min-height: 44px;
+}
+
+.footer-bottom p {
+  position: absolute;
+  left: 10px;
+  right: 280px;
+  margin: 0;
+  text-align: center;
+  white-space: nowrap;
+  font-size: clamp(0.55rem, 1.1vw, 0.85rem);
+  min-width: 0;
+  max-width: calc(100% - 300px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.footer-link-block {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  min-width: 0;
+}
+
+.footer-link-text {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: clamp(0.65rem, 1.2vw, 0.9rem);
+  white-space: nowrap;
+  margin-right: 8px;
+  flex-shrink: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.footer-logo-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.footer-logo-frame {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.04);
+  flex-shrink: 1;
+  min-width: 0;
+}
+
+.footer-logo-img {
+  width: 20px;
+  max-width: 100%;
+  max-height: 20px;
+  height: auto;
+  display: block;
+  flex-shrink: 0;
+}
+
+@media (max-width: 520px) {
+  .footer-bottom {
+    gap: 8px;
+    padding-top: 8px;
+    margin-top: 8px;
+    min-height: 40px;
+  }
+  .footer-bottom p,
+  .footer-link-text {
+    font-size: 0.55rem;
+  }
+  .footer-bottom p {
+    right: 230px;
+    max-width: calc(100% - 250px);
+  }
+  .footer-logo-frame {
+    padding: 7px 10px;
+    gap: 6px;
+  }
+}
+
+@media (max-width: 420px) {
+  .footer-bottom {
+    gap: 6px;
+  }
+  .footer-bottom p,
+  .footer-link-text {
+    font-size: 0.45rem;
+  }
+  .footer-bottom p {
+    right: 190px;
+    max-width: calc(100% - 210px);
+  }
+  .footer-logo-frame {
+    padding: 6px 8px;
+    gap: 5px;
+  }
 }
 
 /* ---------- Scroll Buttons (Top & Bottom) ---------- */
