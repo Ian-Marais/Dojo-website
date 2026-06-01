@@ -944,7 +944,7 @@ ul {
 .footer-bottom p {
   position: absolute;
   left: 10px;
-  right: 160px;
+  right: 120px;
   margin: 0;
   text-align: left;
   white-space: nowrap;
@@ -956,7 +956,7 @@ ul {
 
 .footer-link-block {
   position: absolute;
-  right: 10px;
+  right: 5px;
   top: 50%;
   transform: translateY(-50%);
   display: inline-flex;
@@ -969,7 +969,7 @@ ul {
   color: rgba(255, 255, 255, 0.9);
   font-size: clamp(0.65rem, 1.2vw, 0.9rem);
   white-space: nowrap;
-  margin-right: 8px;
+  margin-right: 4px;
   flex-shrink: 1;
   min-width: 0;
   overflow: hidden;
@@ -987,12 +987,11 @@ ul {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  padding: 10px 12px;
+  gap: 4px;
+  padding: 6px 8px;
   border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 18px;
+  border-radius: 16px;
   background: rgba(255, 255, 255, 0.04);
-  flex-shrink: 1;
   min-width: 0;
 }
 
@@ -1017,11 +1016,11 @@ ul {
     font-size: 0.6rem;
   }
   .footer-bottom p {
-    right: 180px;
+    right: 150px;
   }
   .footer-logo-frame {
-    padding: 7px 10px;
-    gap: 6px;
+    padding: 6px 9px;
+    gap: 5px;
   }
 }
 
@@ -1034,11 +1033,11 @@ ul {
     font-size: 0.55rem;
   }
   .footer-bottom p {
-    right: 160px;
+    right: 140px;
   }
   .footer-logo-frame {
     padding: 6px 8px;
-    gap: 5px;
+    gap: 4px;
   }
 }
 
@@ -1051,7 +1050,7 @@ ul {
     font-size: 0.45rem;
   }
   .footer-bottom p {
-    right: 150px;
+    right: 120px;
   }
   .footer-logo-frame {
     padding: 6px 8px;
